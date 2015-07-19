@@ -26,7 +26,7 @@
 }
 
 .jq-dropdown.jq-dropdown-tip:before{
-	position:absolute;
+	position:fixed;
 	top:-6px;
 	left:9px;
 	content:'';
@@ -37,7 +37,7 @@
 }
 
 .jq-dropdown.jq-dropdown-tip:after{
-	position:absolute;
+	position:fixed;
 	top:-5px;
 	left:10px;
 	content:'';
