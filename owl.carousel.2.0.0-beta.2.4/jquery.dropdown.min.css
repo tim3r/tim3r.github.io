@@ -1,5 +1,5 @@
 .jq-dropdown{
-	position:fixed;
+	position:absolute;
 	z-index:1039;
 	display:none
 }
