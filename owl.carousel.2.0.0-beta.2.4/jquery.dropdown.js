@@ -131,5 +131,6 @@ if (jQuery) (function ($) {
     $(document).on('click.jq-dropdown', '[data-jq-dropdown]', show);
     $(document).on('click.jq-dropdown', hide);
     $(window).on('resize', position);
+    $(window).on('scroll', position);
 
 })(jQuery);
