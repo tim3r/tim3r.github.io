@@ -2470,7 +2470,7 @@
 			}, this),
 			'mouseleave.owl.autoplay': $.proxy(function() {
 				if (this.core.settings.autoplayHoverPause) {
-					this.autoplay();
+					//this.autoplay();
 				}
 			}, this)
 		};
