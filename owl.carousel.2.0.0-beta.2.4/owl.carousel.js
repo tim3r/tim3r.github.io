@@ -2466,17 +2466,6 @@
 			'mouseover.owl.autoplay': $.proxy(function() {
 				if (this.core.settings.autoplayHoverPause) {
 					this.pause();
-					
-					var handler, property;
-
-		window.clearInterval(this.interval);
-
-		for (handler in this.handlers) {
-			this.core.$element.off(handler, this.handlers[handler]);
-		}
-		for (property in Object.getOwnPropertyNames(this)) {
-			typeof this[property] != 'function' && (this[property] = null);
-		}
 				}
 			}, this),
 			'mouseleave.owl.autoplay': $.proxy(function() {
@@ -2557,6 +2546,20 @@
 	 */
 	Autoplay.prototype.pause = function() {
 		window.clearInterval(this.interval);
+
+
+var handler, property;
+
+		window.clearInterval(this.interval);
+
+		for (handler in this.handlers) {
+			this.core.$element.off(handler, this.handlers[handler]);
+		}
+		for (property in Object.getOwnPropertyNames(this)) {
+			typeof this[property] != 'function' && (this[property] = null);
+		}
+		
+
 	};
 
 	/**
