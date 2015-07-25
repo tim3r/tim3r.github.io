@@ -2462,9 +2462,12 @@
 			}, this),
 			'stop.owl.autoplay': $.proxy(function() {
 				this.stop(); 
-
-
-var handler, property;
+			}, this),
+			'mouseover.owl.autoplay': $.proxy(function() {
+				if (this.core.settings.autoplayHoverPause) {
+					this.pause();
+					
+					var handler, property;
 
 		window.clearInterval(this.interval);
 
@@ -2474,12 +2477,6 @@ var handler, property;
 		for (property in Object.getOwnPropertyNames(this)) {
 			typeof this[property] != 'function' && (this[property] = null);
 		}
-
-				
-			}, this),
-			'mouseover.owl.autoplay': $.proxy(function() {
-				if (this.core.settings.autoplayHoverPause) {
-					this.pause();
 				}
 			}, this),
 			'mouseleave.owl.autoplay': $.proxy(function() {
