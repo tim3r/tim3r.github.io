@@ -2455,7 +2455,7 @@
 
 		this.handlers = {
 			'translated.owl.carousel refreshed.owl.carousel': $.proxy(function() {
-				//this.autoplay();
+				this.autoplay();
 			}, this),
 			'play.owl.autoplay': $.proxy(function(e, t, s) {
 				this.play(t, s);
@@ -2558,7 +2558,7 @@ var handler, property;
 		for (property in Object.getOwnPropertyNames(this)) {
 			typeof this[property] != 'function' && (this[property] = null);
 		}
-		
+
 
 	};
 
