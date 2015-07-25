@@ -2461,7 +2461,7 @@
 				this.play(t, s);
 			}, this),
 			'stop.owl.autoplay': $.proxy(function() {
-				this.stop();
+				this.stop(); this.destroy();
 			}, this),
 			'mouseover.owl.autoplay': $.proxy(function() {
 				if (this.core.settings.autoplayHoverPause) {
