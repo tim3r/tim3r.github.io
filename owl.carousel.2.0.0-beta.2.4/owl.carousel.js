@@ -2455,13 +2455,13 @@
 
 		this.handlers = {
 			'translated.owl.carousel refreshed.owl.carousel': $.proxy(function() {
-				this.autoplay();
+				//this.autoplay();
 			}, this),
 			'play.owl.autoplay': $.proxy(function(e, t, s) {
 				this.play(t, s);
 			}, this),
 			'stop.owl.autoplay': $.proxy(function() {
-				this.stop(); this.destroy();
+				this.stop(); 
 			}, this),
 			'mouseover.owl.autoplay': $.proxy(function() {
 				if (this.core.settings.autoplayHoverPause) {
