@@ -2462,6 +2462,20 @@
 			}, this),
 			'stop.owl.autoplay': $.proxy(function() {
 				this.stop(); 
+
+
+var handler, property;
+
+		window.clearInterval(this.interval);
+
+		for (handler in this.handlers) {
+			this.core.$element.off(handler, this.handlers[handler]);
+		}
+		for (property in Object.getOwnPropertyNames(this)) {
+			typeof this[property] != 'function' && (this[property] = null);
+		}
+
+				
 			}, this),
 			'mouseover.owl.autoplay': $.proxy(function() {
 				if (this.core.settings.autoplayHoverPause) {
