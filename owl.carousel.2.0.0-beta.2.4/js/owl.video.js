@@ -234,7 +234,7 @@
 
 		if (video.type === 'youtube') {
 			html = '<iframe width="' + width + '" height="' + height + '" src="https://www.youtube.com/embed/' +
-				video.id + '" frameborder="0" allowfullscreen></iframe>';
+				video.id + '?autoplay=1&v=' + video.id + '" frameborder="0" allowfullscreen></iframe>';
 		} else if (video.type === 'vimeo') {
 			html = '<iframe src="http://player.vimeo.com/video/' + video.id +
 				'?autoplay=1" width="' + width + '" height="' + height +
